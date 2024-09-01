@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.14+commit.80d49f37"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SimpleSmartMoney.sol": "SimpleSmartMoneySmart"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/SimpleSmartMoney.sol": {
+			"keccak256": "0xcaa6ee04c839e84979cf75fcb3ded93df54e6d2fe93113af64a947084fc1fec1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7c2af2dcd161337ef37d68e6707870734b9a14ccae1bc803bacf872ffa230e04",
+				"dweb:/ipfs/QmbA23ooqmdAkWUbKKdPBk3P9yxjb19dHP9aM2XwaAPMue"
+			]
+		}
+	},
+	"version": 1
+}
