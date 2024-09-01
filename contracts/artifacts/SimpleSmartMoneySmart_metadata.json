@@ -4,7 +4,61 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getContractBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalBalanceRecieved",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdrawAllToSenderAddress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "to",
+						"type": "address"
+					}
+				],
+				"name": "withrawToAddress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -12,7 +66,23 @@
 		},
 		"userdoc": {
 			"kind": "user",
-			"methods": {},
+			"methods": {
+				"deposit()": {
+					"notice": "- Function `deposit()`:  - This function allows any user to deposit Ether into the smart contract.  - It is marked as payable, which means it can receive Ether along with  - other data in its transaction.  - The value of the incoming Ether is added to the `totalBalanceRecieved` variable. -  When called, this function will increment the sender's balance by the amount -  they are sending (msg.value).*"
+				},
+				"getContractBalance()": {
+					"notice": "- Function `getContractBalance()`:  - This view function simply returns the current balance of the contract in wei. - It does so by using the built-in `address(this).balance` property which always - refers to the current contract's balance. The returned value is of type uint256, - representing the amount of Ether in the contract, in smallest denomination (wei).*"
+				},
+				"totalBalanceRecieved()": {
+					"notice": "- The `totalBalanceRecieved` is a public state variable of type uint256,  - representing the total amount in wei (the smallest unit of ether) that  - has been deposited into this contract by users.*"
+				},
+				"withdrawAllToSenderAddress()": {
+					"notice": "-  Function `withdrawAllToSenderAddress()`:  - This function allows a user to withdraw all of their Ether from the contract  - back into their own account. The total amount available for withdrawal -  is determined by calling the `getContractBalance()` function (which returns  - the balance of this smart contract). The `transfer` method is used here, which  - sends the specified amount of wei to a given address and automatically handles -  gas fees. In this case, it's sent back to the sender.*"
+				},
+				"withrawToAddress(address)": {
+					"notice": "- Function `withrawToAdress(address payable  to)`:  - This function allows an owner (not shown here because there are no roles defined for - these functions) to withdraw all of the Ether from the contract into a specified  - address. The recipient's address must be provided when calling this function and - it is marked as `payable`, allowing ether to be sent directly to that address.*"
+				}
+			},
 			"version": 1
 		}
 	},
@@ -33,11 +103,11 @@
 	},
 	"sources": {
 		"contracts/SimpleSmartMoney.sol": {
-			"keccak256": "0xcaa6ee04c839e84979cf75fcb3ded93df54e6d2fe93113af64a947084fc1fec1",
+			"keccak256": "0x30914dffbceb9a645ff72494b63b2fb45c10584fe254dce6bc92028ca39660b0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7c2af2dcd161337ef37d68e6707870734b9a14ccae1bc803bacf872ffa230e04",
-				"dweb:/ipfs/QmbA23ooqmdAkWUbKKdPBk3P9yxjb19dHP9aM2XwaAPMue"
+				"bzz-raw://4cc711cbb4090792686f9e781deaab34ca8ce53c88a7ab193f9f6767117be78c",
+				"dweb:/ipfs/QmVXh19wE5fqKFHUp2byxdtRvrq7jRC75JBS2yHJaVpnuT"
 			]
 		}
 	},
